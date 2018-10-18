@@ -9,6 +9,11 @@ import {
 
 
 const timestamp = firebase.firestore.FieldValue.serverTimestamp();
+
+/*const firestore = firebase.firestore();
+const settings = {/* your settings... */ /*timestampsInSnapshots: true };
+firestore.settings(settings);*/
+
 @Injectable()
 export class AuthProvider {
   userCollectionRef: AngularFirestoreCollection<UserInterface>;

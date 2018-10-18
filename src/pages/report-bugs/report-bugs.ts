@@ -21,9 +21,10 @@ const timestamp = firebase.firestore.FieldValue.serverTimestamp();
 @Component({
   selector: 'page-report-bugs',
   templateUrl: 'report-bugs.html',
+  
 })
 export class ReportBugsPage {
-
+  
   private reportBugForm: FormGroup;
   private userID: any;
   private platformOS: any;

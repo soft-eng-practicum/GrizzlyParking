@@ -15,7 +15,7 @@ import {
 import { AuthProvider } from '../../providers/auth/auth';
 import { EmailValidator } from '../../validators/email';
 import { TabsPage } from '../tabs/tabs';
-import { DaysurveyPage } from '../daysurvey/daysurvey';
+//import { DaysurveyPage } from '../daysurvey/daysurvey';
 
 
 @IonicPage({
@@ -50,7 +50,8 @@ export class SignupPage {
       this.authProvider.signupUser(this.signupForm.value.email, this.signupForm.value.password)
         .then(() => {
           this.loading.dismiss().then(() => {
-            this.navCtrl.setRoot(DaysurveyPage);
+            //          this.navCtrl.setRoot(DaysurveyPage);
+//            this.navCtrl.setRoot(IntroPage);
           });
         }, (error) => {
           this.loading.dismiss().then(() => {

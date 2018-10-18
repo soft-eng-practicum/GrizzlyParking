@@ -1,4 +1,4 @@
-﻿import {
+import {
   Component,
   ViewChild,
   ElementRef,
@@ -37,8 +37,6 @@ import {
 import { version } from 'punycode';
 
 
-const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-
 @Component({
   selector: 'page-h-Lot',
   templateUrl: 'h-Lot.html'
@@ -67,6 +65,10 @@ export class HLotPage {
   locationDocumentRef: AngularFirestoreDocument<LocationInterface>;
   plDocumentRef: AngularFirestoreDocument<ParkingLotInterface>;
 
+
+ // get timestamp() {
+   // return firebase.firestore.FieldValue.serverTimestamp();
+  //}
 
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
@@ -99,9 +101,16 @@ export class HLotPage {
 
 
   calcUser(userEmail: string) {
+    console.log('calcUser started with user email: ' + userEmail);
     var userQuery = firebase.firestore().collection('/user').where('email', '==', userEmail);
     var promise = new Promise<boolean>(resolve => {
       return userQuery.get().then(querysnapshot => {
+        console.log('calcUser->querysnapshot: ');
+        console.log(querysnapshot);
+        if (!querysnapshot) {
+          console.log('ERROR: undefined querysnapshot');
+          return;
+        }
         var result = querysnapshot.docs.pop();
         console.log('USER: ', result.data());
         return this.setUser(result.id);
@@ -128,7 +137,7 @@ export class HLotPage {
       return this.userDocumentRef.ref.get().then(result => {
         console.log('GET USER LOCATION: ', result.data().parkedLocation.id);
         return this.setLocation(result.data().parkedLocation.id);
-        //return result.data().isParked;
+        return result.data().isParked;
       }).then(result => {
         console.log('GET USER ISPARKED: ', result);
         return this.setParkedStatus(result);
@@ -147,6 +156,8 @@ export class HLotPage {
   }
 
   setLocation(locID: string) {
+    // if statement here to correct
+    
     var promise = new Promise<boolean>(resolve => {
       this.locationDocumentRef = this.afs.collection('location').doc(locID);
       console.log('SET LOCATION: ', locID.toString());
@@ -357,11 +368,12 @@ export class HLotPage {
       return this.createLocation(myLat, myLng).then(result => {
         return this.calcParkingLot();
       }).then(result => {
+        console.log("Reached promise: " + result);
         return this.userDocumentRef.ref.update({
           isParked: true,
           parkedLocation: this.locationDocumentRef.ref,
           parkedLot: this.plDocumentRef.ref,
-          parkedTime: timestamp
+         // parkedTime: timestamp
         }).then(result => {
           let toast = this._toastCtrl.create({
             message: 'YOU HAVE PARKED',
@@ -441,6 +453,10 @@ export class HLotPage {
 
   // DELETE LOCATION - called by unparkUser()
   deleteLocation() {
+    if (!this.locationDocumentRef) {
+      console.log("not parked");
+      return;
+    }
     console.log("~~~~~ FUNCTION deleteLocation called", this.locationDocumentRef.ref.id.toString());
 
     var promise = new Promise<boolean>(resolve => {

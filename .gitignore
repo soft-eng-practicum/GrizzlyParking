@@ -12,6 +12,17 @@ log.txt
 .vscode/
 npm-debug.log*
 
+# for Ionic
+*.js
+*.js.map
+bld/
+
+# For VS
+*.sln
+*.jsproj
+*.jsproj.user
+.vs/
+
 .idea/
 .sourcemaps/
 .sass-cache/

@@ -9,7 +9,7 @@ import { HLotPage } from './../pages/h-lot/h-lot';
 import { LoginPage } from './../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { SettingsPage } from '../pages/settings/settings';
-import { DaysurveyPage } from '../pages/daysurvey/daysurvey';
+//import { DaysurveyPage } from '../pages/daysurvey/daysurvey';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { ReportBugsPage } from '../pages/report-bugs/report-bugs';
@@ -53,7 +53,6 @@ import { AuthProvider } from '../providers/auth/auth';
     ResetPasswordPage,
     LoginPage,
     AboutPage,
-    DaysurveyPage,
     ReportBugsPage,
     SettingsPage,
   ],
@@ -76,7 +75,6 @@ import { AuthProvider } from '../providers/auth/auth';
     ResetPasswordPage,
     LoginPage,
     AboutPage,
-    DaysurveyPage,
     ReportBugsPage,
     SettingsPage
   ],

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { 
   AngularFireDatabase, 
@@ -25,6 +25,7 @@ import * as firebase from 'firebase';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+/*
 const timestamp = firebase.firestore.FieldValue.serverTimestamp();
 @IonicPage()
 @Component({
@@ -206,3 +207,4 @@ export class DaysurveyPage {
 
   
 }
+*/

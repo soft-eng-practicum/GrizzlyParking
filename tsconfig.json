@@ -21,6 +21,9 @@
     "src/**/*.spec.ts",
     "src/**/__tests__/*.ts"
   ],
+  "types": [
+    "firebase"
+    ],
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false

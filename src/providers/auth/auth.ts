@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import * as firebase from 'firebase';
 import {
-  UserInterface,
+  //UserInterface,
   SurveyTimeInterface,
   ReportBugInterface
 } from "../../shared/models/collections";
@@ -31,24 +31,24 @@ export class AuthProvider {
   }
 
   //creating new user
-  signupUser(email: string, password: string): Promise<any> {
-    this.userCollectionRef.add({
-      isParked: false,
-      parkedLocation: firebase.firestore().collection('/location').doc('none'),
-      parkedLot: firebase.firestore().collection('/parkingLot').doc('none'),
-      parkedTime: timestamp,
-    })
-    return firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password);
-    // .then( newUser => {
-    //   firebase
-    //   .database()
-    //   .ref('/userProfile')
-    //   .child(newUser.uid)
-    //   .set({ email: email });
-    // });
-  }
+  // signupUser(email: string, password: string): Promise<any> {
+  //   this.userCollectionRef.add({
+  //     isParked: false,
+  //     parkedLocation: firebase.firestore().collection('/location').doc('none'),
+  //     parkedLot: firebase.firestore().collection('/parkingLot').doc('none'),
+  //     parkedTime: timestamp,
+  //   })
+  //   return firebase
+  //     .auth()
+  //     .createUserWithEmailAndPassword(email, password);
+  //   // .then( newUser => {
+  //   //   firebase
+  //   //   .database()
+  //   //   .ref('/userProfile')
+  //   //   .child(newUser.uid)
+  //   //   .set({ email: email });
+  //   // });
+  // }
 
   //resetting password
   resetPassword(email: string): Promise<void> {

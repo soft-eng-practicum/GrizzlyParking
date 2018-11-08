@@ -26,8 +26,8 @@ import {
   AngularFirestore,
   AngularFirestoreCollection,
   AngularFirestoreDocument
-} from 'angularfire2/firestore';
-import * as firebase from 'firebase';
+} from '@angular/fire/firestore';
+import * as firebase from '@angular/fire/firebase';
 import { Observable } from 'rxjs/Observable';
 import {
   UserInterface,

@@ -4,7 +4,7 @@ import {
   AngularFirestore,
   AngularFirestoreCollection,
   AngularFirestoreDocument
-} from 'angularfire2/firestore';
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs/Observable';
 import { SurveyTimeInterface } from '../../shared/models/collections';
 import {

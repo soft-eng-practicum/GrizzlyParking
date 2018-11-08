@@ -11,7 +11,7 @@ import {
   FormGroup 
 } from '@angular/forms';
 import { HomePage } from '../home/home';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase';
 
 

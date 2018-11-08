@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import * as firebase from 'firebase';
-import { DaysurveyPage } from '../daysurvey/daysurvey';
+//import { DaysurveyPage } from '../daysurvey/daysurvey';
 import { UpdateSurveyPage } from '../update-survey/update-survey';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { ResetPasswordPage } from '../reset-password/reset-password';

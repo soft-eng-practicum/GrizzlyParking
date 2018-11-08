@@ -27,7 +27,7 @@ import {
   AngularFirestoreCollection,
   AngularFirestoreDocument
 } from '@angular/fire/firestore';
-import * as firebase from '@angular/fire/firebase';
+import * as firebase from 'firebase';
 import { Observable } from 'rxjs/Observable';
 import {
   UserInterface,
@@ -137,7 +137,7 @@ export class HLotPage {
       return this.userDocumentRef.ref.get().then(result => {
         console.log('GET USER LOCATION: ', result.data().parkedLocation.id);
         return this.setLocation(result.data().parkedLocation.id);
-        return result.data().isParked;
+      //  return result.data().isParked;
       }).then(result => {
         console.log('GET USER ISPARKED: ', result);
         return this.setParkedStatus(result);

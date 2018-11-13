@@ -1,7 +1,7 @@
 // SETTINGS - ANGULAR FIREBASE
 export const credentials = {
   firebase: {
-    apiKey: "AIzaSyBMri8zJn3iCZDD5iwklvwatW9nQlM0BnI",
+    apiKey:
     authDomain: "grizzlyparking-2222a.firebaseapp.com",
     databaseURL: "https://grizzlyparking-2222a.firebaseio.com",
     projectId: "grizzlyparking-2222a",

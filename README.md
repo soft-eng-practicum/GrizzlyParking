@@ -356,7 +356,20 @@ Android components and plugins update ***frequently***. If you run into a proble
    `ionic cordova platform add android@6.x`  
 3. You may also need to check gradle, which we maintained through Android Studio.  
 
+## Known Issues
+1. Project does not build for iOS or Android.
+2. Plugins have become outdated. 
+3. Firebase code needs to be rewritten
+4. Geofence plugin has become outdated
+
+### Project Recommendations from Fall 2018 Members
+I would recommend restarting this project natively in both iOS and Android due to Ionic plugins frequently becoming outdated. Native features like GPS are much more reliable when built natively. In our opinion it would take a lot less effort and time to rebuild it with the current Firebase database and using this code as a template. 
+
 ## Team Members  
 * Joshua Tran - [GitHub](https://github.com/jtran6) &nbsp; [LinkedIn](https://www.linkedin.com/in/joshua-tran-9700a8118/)  
 * Luca Parilli - [GitHub]() &nbsp; [LinkedIn](https://www.linkedin.com/in/gianluca-parilli-608421151/)  
 * Chelsea D'Alessandro - [GitHub](https://github.com/chelCcat) &nbsp; [LinkedIn](https://www.linkedin.com/in/chelsea-d-alessandro-bb5581155/)  
+
+## Team Members Fall 2018 
+Jacob Bradberry &nbsp; [LinkedIn](https://www.linkedin.com/in/jacob-bradberry-46139679/)
+Jared Housemann

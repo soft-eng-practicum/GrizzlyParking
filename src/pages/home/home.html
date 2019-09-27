@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- PAGE | Content BEGIN -->
+<ion-content class="bg-dark">
+
+  <!-- PAGE SECTION | Logo - Grizzly Parking text logo (image) -->
+  <img src="assets/imgs/GrizzlyParkingCard.png" alt="Grizzly Parking Logo">
+
+  <!-- PAGE SECTION | List  -->
+  <!-- PARKING LOT CARD | H-Lot -->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-card color="{{cardColor}}" (click)="goToHLotPage()">
+    <ion-card-header>
+      <img src="assets/imgs/hbuilding.png" alt="hbuilding">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <progress-bar [progress]="cardPercentage"></progress-bar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 class="cardHeader">H Lot</ion-col>
+            <ion-col col-4 class="cardCount">{{ (hLotObs | async)?.plPopulation }} / {{ (hLotObs | async)?.plCapacity }}</ion-col>
+            <ion-col col-4 class="cardPercentage">{{ (hLotObs | async)?.plAvailablePct }}%</ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
+<!-- PAGE | CONTENT END -->

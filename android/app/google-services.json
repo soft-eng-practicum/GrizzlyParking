@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "934023729867",
+    "firebase_url": "https://grizzly-parking.firebaseio.com",
+    "project_id": "grizzly-parking",
+    "storage_bucket": "grizzly-parking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934023729867:android:a158369e941ec92ff8c14e",
+        "android_client_info": {
+          "package_name": "com.ggc.grizzlyparking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934023729867-p7lk0vhigv91isrgh2imd8hhcg0h30rv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5-aozePcmPR_cQAkAZJ6M0y9bs0T8JEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934023729867-p7lk0vhigv91isrgh2imd8hhcg0h30rv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,0 @@
-{
-  "name": "GrizzlyParking",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}

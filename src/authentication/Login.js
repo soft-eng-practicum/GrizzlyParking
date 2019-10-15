@@ -67,6 +67,13 @@ export const Login = observer(
                         Log in
                     </Text>
                 </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.button}
+                    onPress={() => RootStore.LoginDomain.createAccount(navigation)}>
+                    <Text style={styles.buttonText}>
+                        Create Account
+                    </Text>
+                </TouchableOpacity>
                 {/*<View style={styles.button}>
                     <Button
                         title="Log in"

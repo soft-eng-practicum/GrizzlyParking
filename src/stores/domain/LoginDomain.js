@@ -17,6 +17,11 @@ export class LoginDomain {
                 { text: "Ok", onPress: () => { } },
             ]);
     }
+
+    @action
+    createAccount(navigation) {
+        navigation.navigate("CreateAccount");
+    }
     //#endregion
 }
 

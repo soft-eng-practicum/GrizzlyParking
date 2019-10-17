@@ -1,13 +1,13 @@
 import { observable, action } from "mobx";
 import { Alert } from "react-native";
 
-export class Domain {
+export class SignupDomain {
     rootStore;
     constructor(rootStore) {
         this.rootStore = rootStore;
     }
 
-    @action
+    /*@action
     signup(navigation) {
         // if (this.rootStore.LoginUI.username === "parkingpirates"
         //     && this.rootStore.LoginUI.password === "softwaredevelopment2")
@@ -17,7 +17,7 @@ export class Domain {
         //         { text: "Ok", onPress: () => { } },
         //     ]);
     }
-    //#endregion
+    //#endregion*/
 }
 
 const strings = {

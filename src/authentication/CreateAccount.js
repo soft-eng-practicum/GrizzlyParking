@@ -66,7 +66,7 @@ export const CreateAccount = observer(
                         Password
                       </Text>
                       <TextInput style={styles.input}
-                      textContentType={"password"}
+                      secureTextEntry={true}
                       style={{height: 40}}
                       placeholder="Enter new password"
                       >

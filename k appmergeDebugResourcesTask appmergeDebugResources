@@ -1,0 +1,69 @@
+[33mcommit fa59d7123ee8dce68d030274fd3ffdb3d4c4bc94[m[33m ([m[1;36mHEAD -> [m[1;32mrnGrizzlyParking[m[33m, [m[1;31morigin/rnGrizzlyParking[m[33m)[m
+Merge: 8420705 2884d4e
+Author: Mark Levengood <mlevengood@ggc.edu>
+Date:   Thu Oct 17 16:18:44 2019 -0400
+
+    Merge branch 'rnGrizzlyParking' of https://github.com/soft-eng-practicum/GrizzlyParking into rnGrizzlyParking
+
+[33mcommit 842070599bc7b1814eb0b29e49bdeb3f92acc646[m
+Author: Mark Levengood <mlevengood@ggc.edu>
+Date:   Thu Oct 17 16:18:27 2019 -0400
+
+    CreateAccount and Root Store files modified
+
+[33mcommit 2884d4e92856f6bb542a99135380b8fd049737fa[m
+Author: jwalton1ggc <46461773+jwalton1ggc@users.noreply.github.com>
+Date:   Thu Oct 17 15:57:24 2019 -0400
+
+    Parking Lot Images
+    
+    Added 6 new Parking Lot Images for our Landing Page.
+
+[33mcommit 5ba5ba92fef25d4465cf0495fa411e659a74fc0c[m
+Author: Joshua Walton <jwalton1@ggc.edu>
+Date:   Wed Oct 16 11:53:59 2019 -0400
+
+    Fixed Class name in SignupDomain.js
+
+[33mcommit d503eee7be416e24cf3df3b916f20abc85fe4d61[m
+Merge: 8f217ce fa16594
+Author: Mark Levengood <mlevengood@ggc.edu>
+Date:   Tue Oct 15 16:56:28 2019 -0400
+
+    Merge branch 'rnGrizzlyParking' of https://github.com/soft-eng-practicum/GrizzlyParking into rnGrizzlyParking
+
+[33mcommit 8f217ce2d6f899317ab225c36ce2d21e6211a1e8[m
+Author: Mark Levengood <mlevengood@ggc.edu>
+Date:   Tue Oct 15 16:55:30 2019 -0400
+
+    CreateAccount.js created.
+
+[33mcommit bca9cac04236d6ea7e2c1c60ebfe72fa8eee6cd1[m
+Author: Mark Levengood <mlevengood@ggc.edu>
+Date:   Sun Oct 6 13:45:18 2019 -0400
+
+    JSON file for Package Lock
+
+[33mcommit fa1659415374e0823fc7a26bb576e5cf2aa7870b[m
+Author: Raghu Khanal <Khanalraghu03@gmail.com>
+Date:   Wed Oct 2 11:54:58 2019 -0400
+
+    raghu made changes
+
+[33mcommit ea1f41867bbd90b9d8ebb5dcdedc9f2886cec746[m
+Author: Josh Walton <jwalton@12stone.com>
+Date:   Fri Sep 27 09:28:55 2019 -0400
+
+    Added our new code base with Firebase fully integrated.
+
+[33mcommit 26a0f959cc1a272bb7d2f415fb06530e22d93947[m
+Author: Josh Walton <jwalton@12stone.com>
+Date:   Fri Sep 27 09:18:29 2019 -0400
+
+    Empty Branch
+
+[33mcommit bc3b53df5e96d3aca4f2d190378f68a7bbf201ab[m
+Author: Josh Walton <jwalton@12stone.com>
+Date:   Thu Sep 26 20:27:59 2019 -0400
+
+    New Repo

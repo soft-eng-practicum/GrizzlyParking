@@ -23,6 +23,12 @@ export class LoginDomain {
         navigation.navigate("CreateAccount");
     }
     //#endregion
+
+    // @action
+    // createAccount(navigation) {
+    //     navigation.navigate("Login");
+
+    // }
 }
 
 const strings = {

@@ -76,7 +76,7 @@ export const CreateAccount = observer(
                     </View>
                   </View>
                   <TouchableOpacity style={styles.button}
-                    onPress={() => RootStore.LoginDomain.createAccount(navigation)}>
+                    onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
                     <Text style={styles.buttonText}>
                         Confirm
                     </Text>
@@ -114,7 +114,7 @@ sectionContainer: {
   paddingHorizontal: 24,
 },
 sectionTitle: {
-  fontSize: 24,
+  fontSize: 18,
   fontWeight: '600',
   color: "#000000",
 },
@@ -124,7 +124,7 @@ input: {
   paddingLeft: 12,
   fontSize: 16,
   backgroundColor: "#FFFFFF",
-  borderColor: "#323232",
+  borderColor: "#0A5A45",
   borderWidth: 1,
 },
 button: {

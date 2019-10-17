@@ -1,14 +1,14 @@
 import { createContext } from 'react';
 import { LoginDomain } from './domain/LoginDomain';
 import { LoginUI } from './ui/LoginUI';
-import { SignupDomain } from './domain/SignupDomain';
-import { SignupUI } from './ui/SignupUI';
+import { CreateAccountDomain } from './domain/SignupDomain';
+import { CreateAccountUI } from './ui/SignupUI';
 
 export class RootStore {
     LoginUI = new LoginUI(this);
     LoginDomain = new LoginDomain(this);
-    //SignupUI = new SignupUI(this);
-    //SignupDomain = new SignupDomain(this);
+    CreateAccountUI = new CreateAccountUI(this);
+    CreateAccountDomain = new CreateAccountDomain(this);
 
     //#region Observables
 

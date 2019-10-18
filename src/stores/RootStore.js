@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 import { LoginDomain } from './domain/LoginDomain';
 import { LoginUI } from './ui/LoginUI';
-import { CreateAccountDomain } from './domain/SignupDomain';
+import { CreateAccountDomain } from './domain/CreateAccountDomain';
 import { CreateAccountUI } from './ui/SignupUI';
 
 export class RootStore {

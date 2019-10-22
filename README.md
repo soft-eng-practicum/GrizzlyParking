@@ -304,3 +304,8 @@ ionic cordova build android
 3. **Raghu Khanal** - Lead Programmer, Testing Lead :wolf:
 4. **Mark Levengood** - Documentation lead, Programmer :computer:
 5. **Travis Toal** - UI/UX design, Programmer :raised_hands:
+
+
+## License for ParkingPirates
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+https://creativecommons.org/licenses/by-nc-sa/4.0/

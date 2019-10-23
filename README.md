@@ -304,3 +304,11 @@ ionic cordova build android
 3. **Raghu Khanal** - Lead Programmer, Testing Lead :wolf:
 4. **Mark Levengood** - Documentation lead, Programmer :computer:
 5. **Travis Toal** - UI/UX design, Programmer :raised_hands:
+
+
+## License for ParkingPirates
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" 
+property="dct:title" rel="dct:type">Grizzly Parking</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/soft-eng-practicum/GrizzlyParking" property="cc:attributionName" rel="cc:attributionURL">Parking Pirates</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/soft-eng-practicum/GrizzlyParking" rel="dct:source">https://github.com/soft-eng-practicum/GrizzlyParking</a>.

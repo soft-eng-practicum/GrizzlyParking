@@ -30,7 +30,7 @@ const AppNavigator = createStackNavigator(
         CreateAccount: { screen: CreateAccount }
     },
     {
-        initialRouteName: "CreateAccount",
+        initialRouteName: "Login",
         headerMode: "none"
     });
 

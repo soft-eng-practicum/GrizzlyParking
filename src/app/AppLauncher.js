@@ -1,11 +1,8 @@
-import { observer } from 'mobx-react';
+
 import React from 'react';
-import {
-    createAppContainer,
-} from 'react-navigation';
-import {
-    createStackNavigator,
-} from 'react-navigation-stack'
+import { observer } from 'mobx-react';
+import {createAppContainer,} from 'react-navigation';
+import {createStackNavigator,} from 'react-navigation-stack'
 import { Login } from "../authentication/Login"
 import { Profile } from "../authentication/Profile"
 import { CreateAccount } from "../authentication/CreateAccount"

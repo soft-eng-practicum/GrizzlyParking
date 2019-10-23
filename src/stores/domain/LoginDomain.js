@@ -9,8 +9,8 @@ export class LoginDomain {
 
     @action
     login(navigation) {
-        if (this.rootStore.LoginUI.username === "parkingpirates"
-            && this.rootStore.LoginUI.password === "softwaredevelopment2")
+        if (this.rootStore.LoginUI.username === "a"
+            && this.rootStore.LoginUI.password === "a")
             navigation.navigate("Profile");
         else
             Alert.alert("Incorrect Login", "Please try again", [

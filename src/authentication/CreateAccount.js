@@ -34,25 +34,6 @@ export const CreateAccount = observer(
             Create Account
                 </Text>
           <View style={styles.sectionContainer}>
-            <Text style={styles.sectionHeader}>
-              First Name
-                      </Text>
-            <TextInput style={styles.input}
-              
-              placeholder="E.g. John"
-            >
-
-            </TextInput>
-
-            <Text style={styles.sectionHeader}>
-              Last Name
-                      </Text>
-            <TextInput style={styles.input}
-             
-              placeholder="E.g. Smith"
-            >
-
-            </TextInput>
 
             <Text style={styles.sectionHeader}>
               Email Address
@@ -65,11 +46,11 @@ export const CreateAccount = observer(
             </TextInput>
 
             <Text style={styles.sectionHeader}>
-              Phone Number
+              Confirm Email
                       </Text>
             <TextInput style={styles.input}
               
-              placeholder="E.g. (770)...-...."
+              placeholder="Confirm your email."
             >
 
             </TextInput>
@@ -80,7 +61,7 @@ export const CreateAccount = observer(
             <TextInput style={styles.input}
               secureTextEntry={true}
               
-              placeholder="Enter new password"
+              placeholder="Enter new password..."
             >
 
             </TextInput>

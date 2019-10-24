@@ -313,3 +313,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Grizzly Parking</span> by <a xmlns:cc="http://creativecommons.org/ns#"
 href="https://github.com/soft-eng-practicum/GrizzlyParking" property="cc:attributionName" rel="cc:attributionURL">Parking Pirates</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 <br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/soft-eng-practicum/GrizzlyParking" rel="dct:source">https://github.com/soft-eng-practicum/GrizzlyParking</a>.
+
+## IP Agreement for ParkingPirates
+<a rel="ip_agreement" src="https://www.dropbox.com/preview/IP%20Agreement%20Parking%20Pirates.pdf?role=work" />
+</a>

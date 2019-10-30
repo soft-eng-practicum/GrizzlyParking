@@ -17,8 +17,8 @@ export const Profile = observer(
         return (
 
             <View style={styles.background}>
-                <ScrollView style={styles.scrollView}>
-
+                <ScrollView>
+                    <View style={styles.scrollView}>
                   <Text style={styles.logoText}> Parking Lots </Text>
 
 
@@ -26,8 +26,17 @@ export const Profile = observer(
                     <View>
                         <Text style={styles.lotsText}>Lot H</Text>
                     </View>
-                    <View>
+                    <View style={styles.imageContainer}>
                         <Image source={B} style={styles.backgroundImage} />
+                    </View>
+
+
+
+                    <View>
+                        <Text style={styles.lotsText}>Lot A</Text>
+                    </View>
+                    <View style={styles.imageContainer}>
+                        <Image source={C} style={styles.backgroundImage} />
                     </View>
 
 
@@ -35,7 +44,7 @@ export const Profile = observer(
                     <View>
                         <Text style={styles.lotsText}>Parking Deck</Text>
                     </View>
-                    <View>
+                    <View style={styles.imageContainer}>
                         <Image source={F} style={styles.backgroundImage} />
                     </View>
 
@@ -44,7 +53,7 @@ export const Profile = observer(
                     <View>
                         <Text style={styles.lotsText}>Lot F</Text>
                     </View>
-                    <View>
+                    <View style={styles.imageContainer}>
                         <Image source={E} style={styles.backgroundImage} />
                     </View>
 
@@ -53,27 +62,16 @@ export const Profile = observer(
                     <View>
                         <Text style={styles.lotsText}>Lot I</Text>
                     </View>
-                    <View>
+                    <View style={styles.imageContainer}>
                         <Image source={D} style={styles.backgroundImage} />
                     </View>
-
-
-
-                    <View>
-                        <Text style={styles.lotsText}>Lot A</Text>
-                    </View>
-                    <View>
-                        <Image source={C} style={styles.backgroundImage} />
-                    </View>
-
 
 
                 
                     <View>
                         <Text style={styles.lotsText}>Lot L</Text>
                     </View>
-
-                    <View>
+                    <View style={styles.imageContainer}>
                         <Image source={A} style={styles.backgroundImage} />
                     </View>
 
@@ -81,25 +79,44 @@ export const Profile = observer(
                         <Button title="Go Back" color="#0A5A45"
                             onPress={() => navigation.goBack()} />
                     </View>
-                
+                    </View>
                 </ScrollView>
             </View>
         );
     })
 
 const styles = StyleSheet.create({
-
+    scrollView: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        paddingRight: 12,
+        paddingLeft: 12
+    },
+    button: {
+        flex: 1
+    },  
     background: {
         backgroundColor: '#056f4b',
         height: HEIGHT,
         width: WIDTH,
     },
-
+    imageContainer: {
+        height: 170,
+        shadowColor: 'black',
+        shadowOpacity: 0.50,
+        shadowOffset: {
+                     width: 10,
+                     height: 10
+                    }
+    },
     backgroundImage: {
-        resizeMode: "contain",
-        alignSelf: 'center',
-        width: 372,
-        height: 177,
+        resizeMode: "cover",
+        alignSelf: 'stretch',
+        flex: 1,
+        width: undefined,
+        height: undefined,
+        borderRadius: 24,
     },
 
     logoText: {

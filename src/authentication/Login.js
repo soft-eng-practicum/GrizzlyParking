@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 15,
         paddingTop: 2,
-        marginBottom: 10,
+        marginBottom: 5,
     },
 
     registerText: {
@@ -183,15 +183,15 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,180,0.35)',
         textAlign: 'center',
         fontSize: 15,
-        width: WIDTH - 275,
+        width: WIDTH - 255,
         height: 22,
         borderRadius: 15,
         margin: 10,
     },
 
     forgotPasswordText: {
-        color: 'rgba(255,255,255,0.7)',
-        backgroundColor: 'rgba(0,180,150,0.15)',
+        color: 'rgba(255,255,255,0.8)',
+        backgroundColor: 'rgba(0,150,120,0.0)',
         textAlign: 'center',
         fontSize: 15,
         width: WIDTH - 235,

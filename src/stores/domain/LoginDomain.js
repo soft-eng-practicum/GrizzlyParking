@@ -22,6 +22,11 @@ export class LoginDomain {
     createAccount(navigation) {
         navigation.navigate("CreateAccount");
     }
+
+    @action
+    forgotPassword(navigation) {
+        navigation.navigate("ForgotPassword");
+    }
     //#endregion
 
     // @action

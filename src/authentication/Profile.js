@@ -78,7 +78,7 @@ export const Profile = observer(
                     </View>
 
                     <View style={styles.button}>
-                        <Button title="Go Back" color="#0A5A45"
+                        <Button title="Logout" color="#0A5A45"
                             onPress={() => navigation.goBack()} />
                     </View>
 

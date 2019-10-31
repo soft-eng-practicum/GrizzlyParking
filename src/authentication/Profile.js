@@ -57,6 +57,8 @@ export const Profile = observer(
                         <Image source={E} style={styles.backgroundImage} />
                     </View>
 
+                    
+
 
 
                     <View>
@@ -79,9 +81,11 @@ export const Profile = observer(
                         <Button title="Go Back" color="#0A5A45"
                             onPress={() => navigation.goBack()} />
                     </View>
+
                     </View>
-                </ScrollView>
+                    </ScrollView>
             </View>
+           
         );
     })
 
@@ -94,21 +98,26 @@ const styles = StyleSheet.create({
         paddingLeft: 12
     },
     button: {
-        flex: 1
+        alignSelf:'center',
+        height: 100,
+        width: 150,
+        marginTop: 25,
+       
     },  
+
     background: {
         backgroundColor: '#056f4b',
         height: HEIGHT,
         width: WIDTH,
     },
     imageContainer: {
-        height: 170,
+        height: 185,
         shadowColor: 'black',
         shadowOpacity: 0.50,
-        shadowOffset: {
-                     width: 10,
-                     height: 10
-                    }
+        shadowOffset:{
+                      width: 10,
+                      height: 10
+                     }
     },
     backgroundImage: {
         resizeMode: "cover",
@@ -116,7 +125,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: undefined,
         height: undefined,
-        borderRadius: 24,
+        borderRadius: 15,
     },
 
     logoText: {

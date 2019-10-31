@@ -126,13 +126,6 @@ export const Login = observer(
                         </TouchableOpacity>
                     </View>
 
-                    <View>
-                        <TouchableOpacity style={styles.buttonForgotPassword}
-                            onPress={() => RootStore.LoginDomain.forgotPassword(navigation)}>
-                            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
-                        </TouchableOpacity>
-                    </View>
-
                 </ImageBackground>
             </View>
         );
@@ -186,7 +179,7 @@ const styles = StyleSheet.create({
         width: WIDTH - 255,
         height: 22,
         borderRadius: 15,
-        margin: 10,
+        margin: 5,
     },
 
     forgotPasswordText: {

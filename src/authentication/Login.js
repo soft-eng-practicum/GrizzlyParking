@@ -126,6 +126,13 @@ export const Login = observer(
                         </TouchableOpacity>
                     </View>
 
+                    <View>
+                        <TouchableOpacity style={styles.buttonForgotPassword}
+                            onPress={() => RootStore.LoginDomain.forgotPassword(navigation)}>
+                            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 </ImageBackground>
             </View>
         );
@@ -232,5 +239,8 @@ const styles = StyleSheet.create({
     },
     buttonRegister: {
         top: 15,
+    },
+    buttonForgotPassword: {
+        top: 10,
     },
 });

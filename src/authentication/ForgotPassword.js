@@ -46,22 +46,23 @@ export const ForgotPassword = observer(
             </TextInput>
 
             <Text style={styles.sectionHeader}>
-              New Password
+              Old Password:
                       </Text>
             <TextInput style={styles.input}
+              secureTextEntry={true}
               
-              placeholder="Please enter your new password:"
+              placeholder="Enter your old password:"
             >
 
             </TextInput>
 
             <Text style={styles.sectionHeader}>
-              Confirm new Password
+              New Password:
                       </Text>
             <TextInput style={styles.input}
               secureTextEntry={true}
               
-              placeholder="Confirm new password:"
+              placeholder="Enter your new password:"
             >
 
             </TextInput>
@@ -71,7 +72,7 @@ export const ForgotPassword = observer(
         <TouchableOpacity style={styles.button}
           onPress={() => RootStore.ForgotPasswordDomain.login(navigation)}>
           <Text style={styles.buttonText}>
-            Confirm
+            Done
                     </Text>
         </TouchableOpacity>
       </View>
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
       alignItems: "center",
       height: HEIGHT,
       width: WIDTH,
-      backgroundColor: "#056f4b",
+      backgroundColor: "#FFFFFF",
   
     },
     logo: {

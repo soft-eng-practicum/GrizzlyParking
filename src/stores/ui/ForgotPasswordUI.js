@@ -9,15 +9,15 @@ export class ForgotPasswordUI {
     //#region Observables
     @observable email = "";
 
-    @observable password = "";
+    @observable oldPassword = "";
 
-    @observable confirmPassword = "";
+    @observable newPassword = "";
     //#endregion
 
     //#region Functions
     @action setEmail(string) { this.email = string }
-    @action setPassword(string) { this.password = string }
-    @action setConfirmPassword(string) { this.confirmPassword = string }
+    @action setOldPassword(string) { this.oldPassword = string }
+    @action setNewPassword(string) { this.newPassword = string }
     //#endregion
 }
 

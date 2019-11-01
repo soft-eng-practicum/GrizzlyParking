@@ -12,7 +12,7 @@ import F from '../../lib/images/Parking_Deck.jpg'
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
 
-export const Profile = observer(
+export const Landing = observer(
     ({ navigation, ...props }) => {
         return (
 

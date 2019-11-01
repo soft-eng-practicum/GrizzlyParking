@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import {createAppContainer,} from 'react-navigation';
 import {createStackNavigator,} from 'react-navigation-stack'
 import { Login } from "../authentication/Login"
-import { Profile } from "../authentication/Profile"
+import { Landing } from "../authentication/Landing"
 import { CreateAccount } from "../authentication/CreateAccount"
 import { ForgotPassword } from "../authentication/ForgotPassword"
 
@@ -27,7 +27,7 @@ export const AppLauncher = observer(
 const AppNavigator = createStackNavigator(
     {
         Login: { screen: Login },
-        Profile: { screen: Profile },
+        Landing: { screen: Landing },
         CreateAccount: { screen: CreateAccount },
         ForgotPassword: { screen: ForgotPassword },
     },

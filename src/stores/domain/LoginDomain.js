@@ -11,7 +11,7 @@ export class LoginDomain {
     login(navigation) {
         if (this.rootStore.LoginUI.username === "a"
             && this.rootStore.LoginUI.password === "a")
-            navigation.navigate("Profile");
+            navigation.navigate("Landing");
         else
             Alert.alert("Incorrect Login", "Please try again", [
                 { text: "Ok", onPress: () => { } },

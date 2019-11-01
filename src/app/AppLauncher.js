@@ -6,6 +6,7 @@ import {createStackNavigator,} from 'react-navigation-stack'
 import { Login } from "../authentication/Login"
 import { Profile } from "../authentication/Profile"
 import { CreateAccount } from "../authentication/CreateAccount"
+import { ForgotPassword } from "../authentication/ForgotPassword"
 
 export const AppLauncher = observer(
     ({
@@ -27,7 +28,8 @@ const AppNavigator = createStackNavigator(
     {
         Login: { screen: Login },
         Profile: { screen: Profile },
-        CreateAccount: { screen: CreateAccount }
+        CreateAccount: { screen: CreateAccount },
+        ForgotPassword: { screen: ForgotPassword },
     },
     {
         initialRouteName: "Login",

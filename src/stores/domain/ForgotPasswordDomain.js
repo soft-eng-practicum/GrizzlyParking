@@ -9,7 +9,7 @@ export class ForgotPasswordDomain {
 
 
     @action
-    login(navigation) {
+    login2(navigation) {
         navigation.navigate("Login");
     }
 }

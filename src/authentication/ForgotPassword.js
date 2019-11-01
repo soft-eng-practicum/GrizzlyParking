@@ -70,7 +70,7 @@ export const ForgotPassword = observer(
           </View>
         </View>
         <TouchableOpacity style={styles.button}
-          onPress={() => RootStore.ForgotPasswordDomain.login(navigation)}>
+          onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
           <Text style={styles.buttonText}>
             Done
                     </Text>

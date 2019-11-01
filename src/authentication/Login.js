@@ -191,13 +191,14 @@ const styles = StyleSheet.create({
 
     forgotPasswordText: {
         color: 'rgba(255,255,255,0.8)',
-        backgroundColor: 'rgba(0,150,120,0.0)',
+        backgroundColor: 'rgb(180,160,0)',
         textAlign: 'center',
         fontSize: 15,
         width: WIDTH - 235,
         height: 22,
         borderRadius: 15,
         margin: 10,
+
     },
 
     inputBoxs: {

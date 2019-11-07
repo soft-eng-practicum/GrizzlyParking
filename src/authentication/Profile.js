@@ -30,7 +30,37 @@ export const Profile = observer(
                         <Image source={B} style={styles.backgroundImage} />
                     </View>
 
+{/* Default --> {assumed equation}
 
+                    availibility = default%;
+                        if user (parked) {
+                            prompt("assume % of availability");
+                                    //onces they answer: +20 stars
+                                            --> with 1000 stars they get free starbucks.
+                            availiability -= 20%; 
+                        } 
+                        
+                        else {
+                            after (hour) --> 
+                        }
+****************************************************************************************************
+
+assumption: 50%;
+
+if(parked):
+    assumption += 10%; 
+else if(!parked && hour = 1):
+        assumption -= 10%;
+        if(asssumption = 0%):
+            assumption = assumption;
+else: 
+    assumption = assumption;
+
+****************************************************************************************************
+
+
+                        */}
+                        
 
                     <View>
                         <Text style={styles.lotsText}>Lot A</Text>
@@ -78,7 +108,7 @@ export const Profile = observer(
                     </View>
 
                     <View style={styles.button}>
-                        <Button title="Go Back" color="#0A5A45"
+                        <Button title="Log Out" color="#0A5A45"
                             onPress={() => navigation.goBack()} />
                     </View>
 

@@ -1,19 +1,49 @@
 
 import { observer } from 'mobx-react';
-import React from 'react';
-import { Button, Text, View, StyleSheet, Image, Dimensions, ImageBackground, ScrollView, } from 'react-native';
+import React, { useEffect } from 'react';
+import { Button, Text, View, StyleSheet, TouchableOpacity, Image, Dimensions, ScrollView, Alert} from 'react-native';
 import A from '../../lib/images/L_Lot.jpg'
 import B from '../../lib/images/H_Lot.jpg'
 import C from '../../lib/images/A_Lot2.jpg'
 import D from '../../lib/images/I_Lot.jpg'
 import E from '../../lib/images/F_Lot.jpg'
 import F from '../../lib/images/Parking_Deck.jpg'
+import { RootStoreContext } from '../stores/RootStore';
 
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
 
 export const Landing = observer(
     ({ navigation, ...props }) => {
+
+        const RootStore = React.useContext(RootStoreContext);
+
+        useEffect(() => {
+            RootStore.ParkingDomain.setListenerForLastCheckin();
+
+            return () => {
+                RootStore.ParkingDomain.removeListenerForLastCheckin();
+            };
+        }, []);
+
+
+        parkingAlert = (lot) => {
+            Alert.alert("Are you Parking Here?", "Are you parking in " + lot + "?",
+            [
+                {
+                    text: "Yes",
+                    onPress: () => RootStore.ParkingDomain.markAsParked(lot)
+                },
+                {
+                    text: "No",
+                    onPress: () => {}
+                }
+            ],
+            {
+                cancelable: true
+            });
+        }
+
         return (
 
             <View style={styles.background}>
@@ -26,36 +56,36 @@ export const Landing = observer(
                     <View>
                         <Text style={styles.lotsText}>Lot H</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot H")}>
                         <Image source={B} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
 
 
                     <View>
                         <Text style={styles.lotsText}>Lot A</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot A")}>
                         <Image source={C} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
 
 
                     <View>
                         <Text style={styles.lotsText}>Parking Deck</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Parking Deck")}>
                         <Image source={F} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
 
 
                     <View>
                         <Text style={styles.lotsText}>Lot F</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot F")}>
                         <Image source={E} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
                     
 
@@ -64,18 +94,18 @@ export const Landing = observer(
                     <View>
                         <Text style={styles.lotsText}>Lot I</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot I")}>
                         <Image source={D} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
 
                 
                     <View>
                         <Text style={styles.lotsText}>Lot L</Text>
                     </View>
-                    <View style={styles.imageContainer}>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot L")}>
                         <Image source={A} style={styles.backgroundImage} />
-                    </View>
+                    </TouchableOpacity>
 
                     <View style={styles.button}>
                         <Button title="Logout" color="#0A5A45"

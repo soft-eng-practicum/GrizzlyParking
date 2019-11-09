@@ -9,15 +9,15 @@ export class CreateAccountUI {
     //#region Observables
     @observable email = "";
 
-    @observable confirmEmail = "";
-
     @observable password = "";
+
+    @observable confirmPassword = "";
     //#endregion
 
     //#region Functions
     @action setEmail(string) { this.email = string }
-    @action setConfirmEmail(string) { this.confirmEmail = string }
     @action setPassword(string) { this.password = string }
+    @action setConfirmPassword(string) { this.confirmPassword = string }
     //#endregion
 }
 

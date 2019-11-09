@@ -1,10 +1,8 @@
 import { observer } from 'mobx-react';
-import { Dimensions, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { RootStoreContext } from '../stores/RootStore';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import auth from '@react-native-firebase/auth';
-import { firebase } from '@react-native-firebase/auth';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
@@ -37,43 +35,18 @@ export const ForgotPassword = observer(
 
             <Text style={styles.sectionHeader}>
               Username
-                      </Text>
+            </Text>
             <TextInput style={styles.input}
-              
-              placeholder="Please enter your existing username."
-            >
-
-            </TextInput>
-
-            <Text style={styles.sectionHeader}>
-              Old Password:
-                      </Text>
-            <TextInput style={styles.input}
-              secureTextEntry={true}
-              
-              placeholder="Enter your old password:"
-            >
-
-            </TextInput>
-
-            <Text style={styles.sectionHeader}>
-              New Password:
-                      </Text>
-            <TextInput style={styles.input}
-              secureTextEntry={true}
-              
-              placeholder="Enter your new password:"
-            >
-
-            </TextInput>
-
+              value={RootStore.ForgotPasswordUI.email}
+              onChangeText={(text) => RootStore.ForgotPasswordUI.setEmail(text)}
+              placeholder="Please enter your existing username." />
           </View>
         </View>
         <TouchableOpacity style={styles.button}
-          onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
+          onPress={() => RootStore.AuthDomain.forgotPassword(navigation)}>
           <Text style={styles.buttonText}>
             Done
-                    </Text>
+          </Text>
         </TouchableOpacity>
       </View>
     );

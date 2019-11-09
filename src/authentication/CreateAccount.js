@@ -1,10 +1,8 @@
 import { observer } from 'mobx-react';
-import { Dimensions, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Dimensions, KeyboardAvoidingView, ScrollView, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { RootStoreContext } from '../stores/RootStore';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import auth from '@react-native-firebase/auth';
-import { firebase } from '@react-native-firebase/auth';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
@@ -13,11 +11,19 @@ export const CreateAccount = observer(
   ({ navigation, ...props }) => {
     const RootStore = React.useContext(RootStoreContext);
 
+    useEffect(() => {
+      return () => {
+        RootStore.CreateAccountUI.setEmail("");
+        RootStore.CreateAccountUI.setPassword("");
+        RootStore.CreateAccountUI.setConfirmPassword("");
+      }
+    }, [])
+
 
     return (
 
 
-      <View style={styles.background}>
+      <ScrollView style={styles.background}>
         <View style={styles.logoView}>
           <Image style={styles.logo}
             source={require("../../lib/images/ggc-logo.png")} />
@@ -33,48 +39,43 @@ export const CreateAccount = observer(
           <Text style={styles.sectionTitle}>
             Create Account
                 </Text>
-          <View style={styles.sectionContainer}>
+          <KeyboardAvoidingView style={styles.sectionContainer} behavior="padding">
 
             <Text style={styles.sectionHeader}>
               Email Address
                       </Text>
             <TextInput style={styles.input}
-              
-              placeholder="Please enter your GGC email."
-            >
-
-            </TextInput>
-
-            <Text style={styles.sectionHeader}>
-              Confirm Email
-                      </Text>
-            <TextInput style={styles.input}
-              
-              placeholder="Confirm your email."
-            >
-
-            </TextInput>
+              value={RootStore.CreateAccountUI.email}
+              onChangeText={(text) => RootStore.CreateAccountUI.setEmail(text)}
+              placeholder="Please enter your GGC email." />
 
             <Text style={styles.sectionHeader}>
               Password
+            </Text>
+            <TextInput style={styles.input}
+              value={RootStore.CreateAccountUI.password}
+              secureTextEntry={true}
+              placeholder="Enter new password..."
+              onChangeText={(text) => RootStore.CreateAccountUI.setPassword(text)} />
+
+            <Text style={styles.sectionHeader}>
+              Confirm Password
                       </Text>
             <TextInput style={styles.input}
+              value={RootStore.CreateAccountUI.confirmPassword}
               secureTextEntry={true}
-              
-              placeholder="Enter new password..."
-            >
+              onChangeText={(text) => RootStore.CreateAccountUI.setConfirmPassword(text)}
+              placeholder="Confirm your email." />
 
-            </TextInput>
-
-          </View>
+          </KeyboardAvoidingView>
         </View>
         <TouchableOpacity style={styles.button}
-          onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
+          onPress={() => RootStore.AuthDomain.createAccount(navigation)}>
           <Text style={styles.buttonText}>
             Confirm
-                    </Text>
+          </Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     );
   }
 );
@@ -88,7 +89,6 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     flexDirection: "column",
-    alignItems: "center",
     height: HEIGHT,
     width: WIDTH,
     backgroundColor: "#056f4b",
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   logoView: {
+    alignSelf: "center",
     borderRadius: 30,
     borderColor: '#0A5A45',
     borderWidth: 5,
@@ -112,6 +113,7 @@ const styles = StyleSheet.create({
   },
 
   body: {
+    alignSelf: "center",
     backgroundColor: "#FFFFFF",
     borderRadius: 5,
     width: WIDTH - 30,
@@ -120,6 +122,7 @@ const styles = StyleSheet.create({
     borderWidth: 5,
   },
   sectionContainer: {
+    alignItems: "center",
     marginTop: 20,
     paddingHorizontal: 24,
  
@@ -127,6 +130,7 @@ const styles = StyleSheet.create({
   },
 
   sectionHeader: {
+    alignItems: "center",
     fontSize: 22,
     fontWeight: '600',
     color: "#000000",
@@ -155,11 +159,12 @@ const styles = StyleSheet.create({
     
   },
   button: {
+    alignSelf: "center",
     height: 50,
     width: 150,
     marginTop: 15,
     borderRadius: 15,
-    backgroundColor: "#0A5A45",
+    backgroundColor: 'rgba(255,0,0,0.6)',
     justifyContent: "center",
   },
   buttonText: {

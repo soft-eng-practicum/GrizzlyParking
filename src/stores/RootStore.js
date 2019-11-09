@@ -1,18 +1,18 @@
 import { createContext } from 'react';
-import { LoginDomain } from './domain/LoginDomain';
 import { LoginUI } from './ui/LoginUI';
-import { CreateAccountDomain } from './domain/CreateAccountDomain';
-import { CreateAccountUI } from './ui/SignupUI';
+import { AuthDomain } from './domain/AuthDomain';
+import { UserDomain } from './domain/UserDomain';
+import { CreateAccountUI } from './ui/CreateAccountUI';
+import { ForgotPasswordUI } from './ui/ForgotPasswordUI';
+import { ParkingDomain } from './domain/ParkingDomain';
 
 export class RootStore {
     LoginUI = new LoginUI(this);
-    LoginDomain = new LoginDomain(this);
+    AuthDomain = new AuthDomain(this);
     CreateAccountUI = new CreateAccountUI(this);
-    CreateAccountDomain = new CreateAccountDomain(this);
-
-    //#region Observables
-
-    //#endregion
+    ForgotPasswordUI = new ForgotPasswordUI(this);
+    UserDomain = new UserDomain(this);
+    ParkingDomain = new ParkingDomain(this)
 }
 
 export const RootStoreContext = createContext(new RootStore());

@@ -138,7 +138,9 @@ else:
                     </TouchableOpacity>
 
                     <View style={styles.button}>
+
                         <Button title="Log Out" color="#0A5A45"
+
                             onPress={() => navigation.goBack()} />
                     </View>
 

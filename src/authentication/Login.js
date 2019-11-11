@@ -16,7 +16,6 @@ export const Login = observer(
     ({ navigation, ...props }) => {
 
         useEffect(() => {
-            RootStore.ParkingDomain.setListenerForLastCheckin();
             return () => {
                 RootStore.LoginUI.setUsername("");
                 RootStore.LoginUI.setPassword("");

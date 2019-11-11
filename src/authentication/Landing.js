@@ -44,6 +44,20 @@ export const Landing = observer(
             });
         }
 
+        determineBackgroundColor = (lot) => {
+            let percentFull = RootStore.ParkingDomain.determinePercent(lot);
+
+            if (percentFull > 60) {
+                return '#d10d0d';
+            } else if (percentFull > 30) {
+                return '#d9d511';
+            } else if (percentFull) {
+                return '#0ec91b';
+            } else {
+                return '#eaeaea'
+            }
+        }
+
         return (
 
             <View style={styles.background}>
@@ -53,8 +67,18 @@ export const Landing = observer(
 
 
 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot H')
+                            }])}/>
                         <Text style={styles.lotsText}>Lot H</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot H')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot H")}>
                         <Image source={B} style={styles.backgroundImage} />
@@ -92,8 +116,18 @@ else:
                         */}
                         
 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot A')
+                            }])}/>
                         <Text style={styles.lotsText}>Lot A</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot A')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot A")}>
                         <Image source={C} style={styles.backgroundImage} />
@@ -101,8 +135,18 @@ else:
 
 
 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Parking Deck')
+                            }])}/>
                         <Text style={styles.lotsText}>Parking Deck</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Parking Deck')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Parking Deck")}>
                         <Image source={F} style={styles.backgroundImage} />
@@ -110,8 +154,18 @@ else:
 
 
 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot F')
+                            }])}/>
                         <Text style={styles.lotsText}>Lot F</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot F')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot F")}>
                         <Image source={E} style={styles.backgroundImage} />
@@ -121,8 +175,18 @@ else:
 
 
 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot I')
+                            }])}/>
                         <Text style={styles.lotsText}>Lot I</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot I')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot I")}>
                         <Image source={D} style={styles.backgroundImage} />
@@ -130,8 +194,18 @@ else:
 
 
                 
-                    <View>
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot L')
+                            }])}/>
                         <Text style={styles.lotsText}>Lot L</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot L')
+                            }])}/>
                     </View>
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot L")}>
                         <Image source={A} style={styles.backgroundImage} />
@@ -141,7 +215,7 @@ else:
 
                         <Button title="Log Out" color="#0A5A45"
 
-                            onPress={() => navigation.goBack()} />
+                            onPress={() => {RootStore.UserDomain.user = null; navigation.goBack();}} />
                     </View>
 
                     </View>
@@ -189,7 +263,21 @@ const styles = StyleSheet.create({
         height: undefined,
         borderRadius: 15,
     },
-
+    lotHeader: {
+        flexDirection: 'row',
+        justifyContent: "space-around",
+        alignItems: 'center',
+        backgroundColor: '#0A5A45',
+        width: WIDTH - 18,
+        height: 30,
+        marginBottom: 10,
+        marginTop: 10,
+    },
+    percentDot: {
+        height: 15,
+        width: 15,
+        borderRadius: 15,
+    },
     logoText: {
         color: 'white',
         textAlign: 'center',
@@ -201,13 +289,8 @@ const styles = StyleSheet.create({
 
     lotsText: {
         color: 'rgba(255,255,255,0.9)',
-        backgroundColor: '#0A5A45',
         textAlign: 'center',
         alignSelf: 'center',
         fontSize: 20,
-        width: WIDTH - 18,
-        height: 30,
-        marginBottom: 10,
-        marginTop: 10,
     },
 });

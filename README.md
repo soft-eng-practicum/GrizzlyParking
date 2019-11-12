@@ -367,7 +367,7 @@ npm install
 npm install -g -react-native-cli
 ```
 
-##Running React-Native on Android
+## Running React-Native on Android
 ```
 react-native run-android
 ```

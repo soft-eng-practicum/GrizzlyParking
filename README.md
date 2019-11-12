@@ -300,7 +300,7 @@ ionic cordova build android
 - Discord, Jira
 ## Team Members Fall 2019
 1. **Nick Risley** - Team Manager, Client Liaison, Data Modeler :penguin:
-2. **Joshua Walton** - Data Modeler, Testing Lead :zap:
+2. **Joshua Walton** - Data Modeler :zap:
 3. **Raghu Khanal** - Lead Programmer, Testing Lead :wolf:
 4. **Mark Levengood** - Documentation lead, Programmer :computer:
 5. **Travis Toal** - UI/UX design, Programmer :raised_hands:

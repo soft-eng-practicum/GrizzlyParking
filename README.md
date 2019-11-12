@@ -317,7 +317,35 @@ href="https://github.com/soft-eng-practicum/GrizzlyParking" property="cc:attribu
 ## IP Agreement for ParkingPirates
 https://www.dropbox.com/preview/IP%20Agreement%20Parking%20Pirates.pdf?role=work
 ## Common errors
+For metro/ react-native start error go to:       
+\node_modules\metro-config\src\defaults\blacklist.js
+
+And change :
 ```$xslt
+
+var sharedBlacklist = [
+  /node_modules[/\\]react[/\\]dist[/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+
+```
+To:
+```$xslt
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+
+```
+
+********************************************************
+For Gradle and KeyStore/Keytool errors:
+```$xslt
+
 rm -rf $GRADLE_HOME/caches/build-cache-*
 
 keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
@@ -326,7 +354,20 @@ keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddeb
 
 ```
 ## Installations
+Node, Python2, JDK 
+```$xslt
+choco install -y nodejs.install python2 jdk8
+
+extra infos:
+https://facebook.github.io/react-native/docs/getting-started
+```
+
 ```$xslt
 npm install
+npm install -g -react-native-cli
+```
+
+##Running React-Native on Android
+```
 react-native run-android
 ```

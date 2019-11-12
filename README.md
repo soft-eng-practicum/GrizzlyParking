@@ -316,4 +316,17 @@ href="https://github.com/soft-eng-practicum/GrizzlyParking" property="cc:attribu
 
 ## IP Agreement for ParkingPirates
 https://www.dropbox.com/preview/IP%20Agreement%20Parking%20Pirates.pdf?role=work
+## Common errors
+```$xslt
+rm -rf $GRADLE_HOME/caches/build-cache-*
 
+keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+
+./gradlew cleanBuildCache
+
+```
+## Installations
+```$xslt
+npm install
+react-native run-android
+```

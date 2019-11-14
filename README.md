@@ -8,8 +8,8 @@ An Ionic parking app that helps ease the flow of traffic on GGC's campus and hel
 
 <ol>
     <li>Uses Google Firebase Authentication to register and verify users(@ggc.edu         addresses only)</li>
-    <li>Uses Google Firebase Firesore as DB solution</li>
-    <li>Uses Ionic-Native plugins to keep track of users(Geofence, Geolocation)</li>
+    <li>Uses Google Firebase Firestore as DB solution</li>
+    <li>Uses Ionic-Native plugins to keep track of users(Geo fence, Geolocation)</li>
 
 </ol>
 
@@ -252,14 +252,14 @@ ionic cordova build android
 4. Google Maps Integration
 5. User Class Schedule Survey
 6. Report Bugs Feature
-7. Custom H-Lot Geofence
+7. Custom H-Lot Geo-fence
 ## Future Iterations
 1. The rest of the campus parking lots
-<br>Ordered by desirabiity
+<br>Ordered by desirability
 <br>A Lot(Highest Priority)
 <br>L Lot
 <br>I Lot(Lowest Priority)
-2. Falculty Parking Application(Optional as it adds a lot of complexity)
+2. Faculty Parking Application(Optional as it adds a lot of complexity)
 <br>B Lot
 <br>A Lot
 3. Google Maps Overlay
@@ -294,10 +294,12 @@ ionic cordova build android
 
 --------------------------
 --------------------------
-## Parking Pirates
+# Parking Pirates
 ## Repo Location:
+https://github.com/soft-eng-practicum/GrizzlyParking/tree/rnGrizzlyParking
 ## Progress Tracking Tool
-- Discord, Jira
+- Discord
+- Jira
 ## Team Members Fall 2019
 1. **Nick Risley** - Team Manager, Client Liaison, Data Modeler :penguin:
 2. **Joshua Walton** - Data Modeler :zap:
@@ -320,7 +322,7 @@ https://www.dropbox.com/preview/IP%20Agreement%20Parking%20Pirates.pdf?role=work
 For metro/ react-native start error go to:       
 \node_modules\metro-config\src\defaults\blacklist.js
 
-And change :
+Change :
 ```$xslt
 
 var sharedBlacklist = [
@@ -343,7 +345,7 @@ var sharedBlacklist = [
 ```
 
 ********************************************************
-For Gradle and KeyStore/Keytool errors:
+For Gradle and/or KeyStore/Keytool errors:
 ```$xslt
 
 rm -rf $GRADLE_HOME/caches/build-cache-*
@@ -364,7 +366,7 @@ https://facebook.github.io/react-native/docs/getting-started
 
 ```$xslt
 npm install
-npm install -g -react-native-cli
+npm install -g react-native-cli
 ```
 
 ## Running React-Native on Android

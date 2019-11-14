@@ -19,13 +19,12 @@ export const Landing = observer(
         const RootStore = React.useContext(RootStoreContext);
 
         useEffect(() => {
-            RootStore.ParkingDomain.setListenerForLastCheckin();
-
             return () => {
                 RootStore.ParkingDomain.removeListenerForLastCheckin();
             };
         }, []);
 
+        RootStore.ParkingDomain.setListenerForLastCheckin();
 
         parkingAlert = (lot) => {
             Alert.alert("Are you Parking Here?", "Are you parking in " + lot + "?",
@@ -45,13 +44,16 @@ export const Landing = observer(
         }
 
         determineBackgroundColor = (lot) => {
-            let percentFull = RootStore.ParkingDomain.determinePercent(lot);
+            let parkingLot = RootStore.ParkingDomain.parkingLots.find(x => x.Name == lot);
 
-            if (percentFull > 60) {
+            if (!parkingLot) {
+                return '#eaeaea'
+            }
+            else if (parkingLot.CheckinPercent > 60) {
                 return '#d10d0d';
-            } else if (percentFull > 30) {
+            } else if (parkingLot.CheckinPercent > 30) {
                 return '#d9d511';
-            } else if (percentFull) {
+            } else if (parkingLot.CheckinPercent) {
                 return '#0ec91b';
             } else {
                 return '#eaeaea'

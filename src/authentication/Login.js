@@ -36,8 +36,12 @@ export const Login = observer(
                     {this.RootStore != null && this.RootStore.UserDomain != null && this.RootStore.UserDomain.user != null &&
                         <KeyboardAvoidingView style={styles.button} behavior="padding">
                             <TouchableOpacity style={styles.buttonLogin}
-                                onPress={() => RootStore.ParkingDomain.navigateToLanding(navigation)}>
-                                <Text style={styles.loginText}>Welcome back {this.RootStore.UserDomain.user.user._user.email}</Text>
+                                onPress={() => RootStore.ParkingDomain.navigateToLanding(navigation)}
+                                >
+                                <Text style={styles.loginText}>Welcome back 
+                               {this.RootStore.UserDomain.user.user._user.email}
+                                
+                                </Text>
                             </TouchableOpacity>
                         </KeyboardAvoidingView>}
 
@@ -70,14 +74,16 @@ export const Login = observer(
                             secureTextEntry={true}
                             value={RootStore.LoginUI.password}
                             returnKeyType="go"
-                            onSubmitEditing={() => RootStore.AuthDomain.login(navigation)}
+                           onSubmitEditing={() => RootStore.AuthDomain.login(navigation)}
                             onChangeText={(text) => RootStore.LoginUI.setPassword(text)} />
                     </View>}
 
-                    {(this.RootStore == null || this.RootStore.UserDomain == null || this.RootStore.UserDomain.user == null) &&
+                    {(this.RootStore == null ||this.RootStore.UserDomain == null ||this.RootStore.UserDomain.user == null) &&
+
                         <KeyboardAvoidingView style={styles.button} behavior="padding">
                             <TouchableOpacity style={styles.buttonLogin}
-                                onPress={() => RootStore.AuthDomain.login(navigation)}>
+                                onPress={() => RootStore.AuthDomain.login(navigation)}
+                                >
                                 <Text style={styles.loginText}>Login</Text>
                             </TouchableOpacity>
                         </KeyboardAvoidingView>}
@@ -85,7 +91,8 @@ export const Login = observer(
                     {(this.RootStore == null || this.RootStore.UserDomain == null || this.RootStore.UserDomain.user == null) &&
                         <KeyboardAvoidingView style={styles.button} behavior="padding">
                             <TouchableOpacity style={styles.buttonRegister}
-                                onPress={() => RootStore.AuthDomain.navigateToCreateAccount(navigation)}>
+                                onPress={() => RootStore.AuthDomain.navigateToCreateAccount(navigation)}
+                                >
                                 <Text style={styles.registerText}>Create Account</Text>
                             </TouchableOpacity>
                         </KeyboardAvoidingView>}
@@ -93,7 +100,8 @@ export const Login = observer(
                     {(this.RootStore == null || this.RootStore.UserDomain == null || this.RootStore.UserDomain.user == null) &&
                         <KeyboardAvoidingView style={styles.button} behavior="padding">
                             <TouchableOpacity style={styles.buttonForgotPassword}
-                                onPress={() => RootStore.AuthDomain.navigateToForgotPassword(navigation)}>
+                                onPress={() => RootStore.AuthDomain.navigateToForgotPassword(navigation)}
+                                >
                                 <Text style={styles.forgotPasswordText}>Forgot password?</Text>
                             </TouchableOpacity>
                         </KeyboardAvoidingView>}
@@ -111,12 +119,13 @@ const styles = StyleSheet.create({
     },
 
     backgroundImage: {
-        alignSelf: 'center',
+         alignSelf: 'center',
         alignItems: 'center',
-        width: 280,
-        height: 280,
-        marginTop: 24,
-        paddingTop: 350,
+        flex: 1,
+        width: 320,
+        height: 320,
+        marginTop: 20,
+        paddingTop: 335,
         resizeMode: 'contain'
     },
 
@@ -150,26 +159,25 @@ const styles = StyleSheet.create({
         color: 'rgba(255,255,255,0.7)',
         backgroundColor: 'rgba(0,0,180,0.35)',
         textAlign: 'center',
-        fontSize: 15,
-        width: WIDTH - 255,
-        height: 22,
+        fontSize: 18,
+        width: WIDTH - 240,
+        height: 27,
         borderRadius: 15,
-        margin: 5,
+        margin: 10,
     },
 
     forgotPasswordText: {
         color: 'rgba(255,255,255,0.8)',
-        backgroundColor: 'rgb(180,160,0)',
+        backgroundColor: 'rgba(0,150,120,0.0)',
         textAlign: 'center',
         fontSize: 15,
         width: WIDTH - 235,
-        height: 22,
+        height: 27,
         borderRadius: 15,
-        margin: 10,
-
+        margin: 20,
     },
 
-    inputBoxs: {
+  inputBoxs: {
         backgroundColor: 'rgba(255,255,255,0.35)',
         width: WIDTH - 80,
         height: 45,
@@ -188,13 +196,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         color: 'rgba(255,255,255,0.5)',
         top: 7,
-        left: 12
+        left: 55
+       
     },
     inputIconPass: {
         position: 'absolute',
         color: 'rgba(255,255,255,0.5)',
         top: 7,
-        left: 15
+        left: 55
     },
 
     buttonEye: {
@@ -208,8 +217,5 @@ const styles = StyleSheet.create({
     },
     buttonRegister: {
         top: 15,
-    },
-    buttonForgotPassword: {
-        top: 10,
     },
 });

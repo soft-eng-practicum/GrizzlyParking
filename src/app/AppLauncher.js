@@ -7,6 +7,7 @@ import { Login } from "../authentication/Login"
 import { Landing } from "../authentication/Landing"
 import { CreateAccount } from "../authentication/CreateAccount"
 import { ForgotPassword } from "../authentication/ForgotPassword"
+import { ProfilePage } from "../authentication/ProfilePage"
 
 export const AppLauncher = observer(
     ({
@@ -30,6 +31,7 @@ const AppNavigator = createStackNavigator(
         Landing: { screen: Landing },
         CreateAccount: { screen: CreateAccount },
         ForgotPassword: { screen: ForgotPassword },
+        ProfilePage: { screen: ProfilePage },
     },
     {
         initialRouteName: "Login",

@@ -317,7 +317,7 @@ href="https://github.com/soft-eng-practicum/GrizzlyParking" property="cc:attribu
 <br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/soft-eng-practicum/GrizzlyParking" rel="dct:source">https://github.com/soft-eng-practicum/GrizzlyParking</a>.
 
 ## IP Agreement for ParkingPirates
-https://www.dropbox.com/preview/IP%20Agreement%20Parking%20Pirates.pdf?role=work
+https://drive.google.com/file/d/1R_85lmLhbZ7278b3c3JkV3T6hhzGbNIk/view?usp=sharing
 ## Common errors
 For metro/ react-native start error go to:       
 \node_modules\metro-config\src\defaults\blacklist.js

@@ -32,7 +32,6 @@ const AppNavigator = createStackNavigator(
         CreateAccount: { screen: CreateAccount },
         ForgotPassword: { screen: ForgotPassword },
         ProfilePage: { screen: ProfilePage },
-        
     },
     {
         initialRouteName: "Login",

@@ -19,13 +19,12 @@ export const Landing = observer(
         const RootStore = React.useContext(RootStoreContext);
 
         useEffect(() => {
-            //RootStore.ParkingDomain.setListenerForLastCheckin();
-
             return () => {
                 //RootStore.ParkingDomain.removeListenerForLastCheckin();
             };
         }, []);
 
+        RootStore.ParkingDomain.setListenerForLastCheckin();
 
         parkingAlert = (lot) => {
             Alert.alert("Are you Parking Here?", "Are you parking in " + lot + "?",
@@ -45,13 +44,16 @@ export const Landing = observer(
         }
 
         determineBackgroundColor = (lot) => {
-            let percentFull = RootStore.ParkingDomain.determinePercent(lot);
+            let parkingLot = RootStore.ParkingDomain.parkingLots.find(x => x.Name == lot);
 
-            if (percentFull > 60) {
+            if (!parkingLot) {
+                return '#eaeaea'
+            }
+            else if (parkingLot.CheckinPercent > 60) {
                 return '#d10d0d';
-            } else if (percentFull > 30) {
+            } else if (parkingLot.CheckinPercent > 30) {
                 return '#d9d511';
-            } else if (percentFull) {
+            } else if (parkingLot.CheckinPercent) {
                 return '#0ec91b';
             } else {
                 return '#eaeaea'
@@ -81,6 +83,7 @@ export const Landing = observer(
                             <View style={styles.button}>
 
                                 <TouchableOpacity style={styles.buttonText}
+<<<<<<< HEAD
                                     onPress={() => navigation.goBack()}>
                                     <Text style={styles.buttonText}>Profile</Text>
                                 </TouchableOpacity>
@@ -241,6 +244,126 @@ else:
 
                                 onPress={() => { RootStore.UserDomain.user = null; navigation.goBack(); }} />
                         </View>
+=======
+                                    onPress={() => navigation.navigate("ProfilePage")}>
+                                    <Text style={styles.buttonText}>Profile</Text>
+                                </TouchableOpacity>
+
+                            </View>
+
+                        </View>
+
+
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot H')
+                            }])}/>
+                        <Text style={styles.lotsText}>Lot H</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot H')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot H")}>
+                        <Image source={B} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot A')
+                            }])}/>
+                        <Text style={styles.lotsText}>Lot A</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot A')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot A")}>
+                        <Image source={C} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+
+
+
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Parking Deck')
+                            }])}/>
+                        <Text style={styles.lotsText}>Parking Deck</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Parking Deck')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Parking Deck")}>
+                        <Image source={F} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+
+
+
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot F')
+                            }])}/>
+                        <Text style={styles.lotsText}>Lot F</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot F')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot F")}>
+                        <Image source={E} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+
+
+
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot I')
+                            }])}/>
+                        <Text style={styles.lotsText}>Lot I</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot I')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot I")}>
+                        <Image source={D} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+
+
+                
+                    <View style={styles.lotHeader}>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot L')
+                            }])}/>
+                        <Text style={styles.lotsText}>Lot L</Text>
+                        <View style={StyleSheet.flatten([
+                            styles.percentDot,
+                            {
+                                backgroundColor: this.determineBackgroundColor('Lot L')
+                            }])}/>
+                    </View>
+                    <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot L")}>
+                        <Image source={A} style={styles.backgroundImage} />
+                    </TouchableOpacity>
+>>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
 
                     </View>
                 </ScrollView>
@@ -256,12 +379,16 @@ const styles = StyleSheet.create({
         paddingRight: 12,
         paddingLeft: 12
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
     titleContainer: {
         flex: 1,
         flexDirection: "row",
         justifyContent: 'space-between',
     },
+<<<<<<< HEAD
     // button: {
     //     alignSelf: 'center',
     //     height: 100,
@@ -270,6 +397,14 @@ const styles = StyleSheet.create({
 
     // },
 
+=======
+    /*button: {
+        alignSelf:'center',
+        height: 100,
+        width: 150,
+        marginTop: 25,
+    },*/
+>>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
     button: {
         backgroundColor: '#0A5A45',
         borderRadius:15,
@@ -277,11 +412,19 @@ const styles = StyleSheet.create({
         width: 70,
         marginTop: 15,
 },
+<<<<<<< HEAD
 buttonText: {
     color: 'rgba(255,255,255,0.9)',
     textAlign:'center',
     fontSize: 15,
     marginTop:4,
+=======
+    buttonText: {
+        color: 'rgba(255,255,255,0.9)',
+        textAlign:'center',
+        fontSize: 15,
+        marginTop:4,
+>>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
 },
 
     background: {

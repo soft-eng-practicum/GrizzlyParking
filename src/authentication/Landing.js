@@ -83,168 +83,6 @@ export const Landing = observer(
                             <View style={styles.button}>
 
                                 <TouchableOpacity style={styles.buttonText}
-<<<<<<< HEAD
-                                    onPress={() => navigation.goBack()}>
-                                    <Text style={styles.buttonText}>Profile</Text>
-                                </TouchableOpacity>
-
-                            </View>
-
-                        </View>
-
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot H')
-                                }])} />
-                            <Text style={styles.lotsText}>Lot H</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot H')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot H")}>
-                            <Image source={B} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-                        {/* Default --> {assumed equation}
-
-                    availibility = default%;
-                        if user (parked) {
-                            prompt("assume % of availability");
-                                    //onces they answer: +20 stars
-                                            --> with 1000 stars they get free starbucks.
-                            availiability -= 20%; 
-                        } 
-                        
-                        else {
-                            after (hour) --> 
-                        }
-****************************************************************************************************
-
-assumption: 50%;
-
-if(parked):
-    assumption += 10%; 
-else if(!parked && hour = 1):
-        assumption -= 10%;
-        if(asssumption = 0%):
-            assumption = assumption;
-else: 
-    assumption = assumption;
-
-****************************************************************************************************
-
-
-                        */}
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot A')
-                                }])} />
-                            <Text style={styles.lotsText}>Lot A</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot A')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot A")}>
-                            <Image source={C} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Parking Deck')
-                                }])} />
-                            <Text style={styles.lotsText}>Parking Deck</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Parking Deck')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Parking Deck")}>
-                            <Image source={F} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot F')
-                                }])} />
-                            <Text style={styles.lotsText}>Lot F</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot F')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot F")}>
-                            <Image source={E} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-
-
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot I')
-                                }])} />
-                            <Text style={styles.lotsText}>Lot I</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot I')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot I")}>
-                            <Image source={D} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-
-
-                        <View style={styles.lotHeader}>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot L')
-                                }])} />
-                            <Text style={styles.lotsText}>Lot L</Text>
-                            <View style={StyleSheet.flatten([
-                                styles.percentDot,
-                                {
-                                    backgroundColor: this.determineBackgroundColor('Lot L')
-                                }])} />
-                        </View>
-                        <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot L")}>
-                            <Image source={A} style={styles.backgroundImage} />
-                        </TouchableOpacity>
-
-                        <View style={styles.button}>
-
-                            <Button title="Log Out" color="#0A5A45"
-
-                                onPress={() => { RootStore.UserDomain.user = null; navigation.goBack(); }} />
-                        </View>
-=======
                                     onPress={() => navigation.navigate("ProfilePage")}>
                                     <Text style={styles.buttonText}>Profile</Text>
                                 </TouchableOpacity>
@@ -363,7 +201,6 @@ else:
                     <TouchableOpacity style={styles.imageContainer} onPress={() => parkingAlert("Lot L")}>
                         <Image source={A} style={styles.backgroundImage} />
                     </TouchableOpacity>
->>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
 
                     </View>
                 </ScrollView>
@@ -379,32 +216,17 @@ const styles = StyleSheet.create({
         paddingRight: 12,
         paddingLeft: 12
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
     titleContainer: {
         flex: 1,
         flexDirection: "row",
         justifyContent: 'space-between',
     },
-<<<<<<< HEAD
-    // button: {
-    //     alignSelf: 'center',
-    //     height: 100,
-    //     width: 150,
-    //     marginTop: 25,
-
-    // },
-
-=======
     /*button: {
         alignSelf:'center',
         height: 100,
         width: 150,
         marginTop: 25,
     },*/
->>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
     button: {
         backgroundColor: '#0A5A45',
         borderRadius:15,
@@ -412,19 +234,11 @@ const styles = StyleSheet.create({
         width: 70,
         marginTop: 15,
 },
-<<<<<<< HEAD
-buttonText: {
-    color: 'rgba(255,255,255,0.9)',
-    textAlign:'center',
-    fontSize: 15,
-    marginTop:4,
-=======
     buttonText: {
         color: 'rgba(255,255,255,0.9)',
         textAlign:'center',
         fontSize: 15,
         marginTop:4,
->>>>>>> bf62e5e4c6fd2523878e8005adfeb8ede5bb383f
 },
 
     background: {

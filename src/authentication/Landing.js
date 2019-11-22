@@ -1,7 +1,7 @@
 
 import { observer } from 'mobx-react';
 import React, { useEffect } from 'react';
-import { Button, Text, View, StyleSheet, TouchableOpacity, Image, Dimensions, ScrollView, Alert} from 'react-native';
+import { Button, Text, View, StyleSheet, TouchableOpacity, Image, Dimensions, ScrollView, Alert } from 'react-native';
 import A from '../../lib/images/L_Lot.jpg'
 import B from '../../lib/images/H_Lot.jpg'
 import C from '../../lib/images/A_Lot2.jpg'
@@ -20,7 +20,7 @@ export const Landing = observer(
 
         useEffect(() => {
             return () => {
-                RootStore.ParkingDomain.removeListenerForLastCheckin();
+                //RootStore.ParkingDomain.removeListenerForLastCheckin();
             };
         }, []);
 
@@ -28,19 +28,19 @@ export const Landing = observer(
 
         parkingAlert = (lot) => {
             Alert.alert("Are you Parking Here?", "Are you parking in " + lot + "?",
-            [
+                [
+                    {
+                        text: "Yes",
+                        // onPress: () => RootStore.ParkingDomain.markAsParked(lot)
+                    },
+                    {
+                        text: "No",
+                        onPress: () => { }
+                    }
+                ],
                 {
-                    text: "Yes",
-                    onPress: () => RootStore.ParkingDomain.markAsParked(lot)
-                },
-                {
-                    text: "No",
-                    onPress: () => {}
-                }
-            ],
-            {
-                cancelable: true
-            });
+                    cancelable: true
+                });
         }
 
         determineBackgroundColor = (lot) => {
@@ -203,16 +203,15 @@ export const Landing = observer(
                     </TouchableOpacity>
 
                     </View>
-                    </ScrollView>
+                </ScrollView>
             </View>
-           
+
         );
     })
 
 const styles = StyleSheet.create({
     scrollView: {
         flex: 1,
-        flexDirection: 'column',
         justifyContent: 'center',
         paddingRight: 12,
         paddingLeft: 12
@@ -251,10 +250,10 @@ const styles = StyleSheet.create({
         height: 185,
         shadowColor: 'black',
         shadowOpacity: 0.50,
-        shadowOffset:{
-                      width: 10,
-                      height: 10
-                     }
+        shadowOffset: {
+            width: 10,
+            height: 10
+        }
     },
     backgroundImage: {
         resizeMode: "cover",
@@ -282,7 +281,7 @@ const styles = StyleSheet.create({
     logoText: {
         color: 'white',
         textAlign: 'center',
-        fontSize: 40,
+        fontSize: 38,
         opacity: 0.8,
         marginTop: 10,
         paddingBottom: 5,

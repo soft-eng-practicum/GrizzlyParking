@@ -184,7 +184,6 @@ export const Landing = observer(
                     </TouchableOpacity>
 
 
-                
                     <View style={styles.lotHeader}>
                         <View style={StyleSheet.flatten([
                             styles.percentDot,

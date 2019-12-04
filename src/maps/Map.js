@@ -6,7 +6,6 @@ export default class Map extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-
                 <MapView style={styles.map}
                     region={{
                        latitude: 33.98033,
@@ -23,11 +22,7 @@ export default class Map extends React.Component {
                         title={'GGC'}
                         description={'Actual location of GGC'}
                     />
-
-
                 </MapView>
-
-
             </View>
         );
     }

@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { observer } from 'mobx-react';
-import {createAppContainer,} from 'react-navigation';
-import {createStackNavigator,} from 'react-navigation-stack'
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack'
 import { Login } from "../authentication/Login"
 import { Landing } from "../authentication/Landing"
 import { CreateAccount } from "../authentication/CreateAccount"

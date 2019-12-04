@@ -4,8 +4,8 @@ import { RootStoreContext } from '../stores/RootStore';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import React, { useEffect } from 'react';
 
-const { width: WIDTH } = Dimensions.get('window')
-const { height: HEIGHT } = Dimensions.get('window')
+const { width: WIDTH } = Dimensions.get('window');
+const { height: HEIGHT } = Dimensions.get('window');
 
 export const CreateAccount = observer(
   ({ navigation, ...props }) => {
@@ -17,12 +17,9 @@ export const CreateAccount = observer(
         RootStore.CreateAccountUI.setPassword("");
         RootStore.CreateAccountUI.setConfirmPassword("");
       }
-    }, [])
-
+    }, []);
 
     return (
-
-
       <ScrollView>
         <View style={styles.background}>
 
@@ -38,7 +35,6 @@ export const CreateAccount = observer(
             </Text>
 
             <KeyboardAvoidingView style={styles.sectionContainer} behavior="padding">
-
               <Text style={styles.sectionHeader}>
                 Email Address
               </Text>
@@ -67,9 +63,7 @@ export const CreateAccount = observer(
                 secureTextEntry={true}
                 onChangeText={(text) => RootStore.CreateAccountUI.setConfirmPassword(text)}
                 placeholder="Confirm your email." />
-
             </KeyboardAvoidingView>
-
           </View>
 
           <View style={styles.buttonContainer}>
@@ -95,11 +89,6 @@ export const CreateAccount = observer(
     );
   }
 );
-
-
-
-
-
 
 const styles = StyleSheet.create({
 
@@ -132,7 +121,6 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 5,
     width: WIDTH - 30,
     borderRadius: 30,
     borderColor: '#0A5A45',

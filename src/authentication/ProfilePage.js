@@ -2,11 +2,6 @@ import { observer } from 'mobx-react';
 import { Dimensions, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { RootStoreContext } from '../stores/RootStore';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-<<<<<<< HEAD
-=======
-import { auth } from '@react-native-firebase/auth';
-import { firebase } from '@react-native-firebase/auth';
->>>>>>> 724f9e14f43e187934db5643063b4964e83c5761
 import Icon from 'react-native-vector-icons/Ionicons';
 import React, { useState, useEffect } from 'react';
 
@@ -14,84 +9,76 @@ const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
 
 export const ProfilePage = observer(
-  ({ navigation, ...props }) => {
-    const RootStore = React.useContext(RootStoreContext);
+    ({ navigation, ...props }) => {
+      const RootStore = React.useContext(RootStoreContext);
 
 
-    return (
+      return (
 
-      <View style={styles.background}>
-        <View style={styles.logoView}>
-          <Image style={styles.logo}
-            source={require("../../lib/images/ggc-logo.png")} />
-        </View>
+          <View style={styles.background}>
+            <View style={styles.logoView}>
+              <Image style={styles.logo}
+                     source={require("../../lib/images/ggc-logo.png")} />
+            </View>
 
-        <View style={styles.body}>
+            <View style={styles.body}>
 
-          <Text style={styles.sectionTitle}>
-            My Profile
+              <Text style={styles.sectionTitle}>
+                My Profile
+              </Text>
+
+              <View style={styles.sectionContainer}>
+                <Text style={styles.ProfileText}>
+                  Account Email: Gname@ggc.edu
+                </Text>
+              </View>
+
+              <View style={styles.legend}>
+                <Text style={styles.sectionTitle}>
+                  Legend
                 </Text>
 
-          <View style={styles.sectionContainer}>
-            <Text style={styles.ProfileText}>
-<<<<<<< HEAD
-              Account Email: useremail@ggc.edu
-=======
-              Account Email: Gname@ggc.edu
->>>>>>> 724f9e14f43e187934db5643063b4964e83c5761
-            </Text>
+                <View style={styles.legendView}>
+                  <Icon name={'ios-radio-button-on'} size={28} color={"#0ec91b"}
+                        style={styles.legendIcon} />
+                  <Text style={styles.legendText}>
+                    High chance of finding a parking space
+                  </Text>
+                </View>
+
+                <View style={styles.legendView}>
+                  <Icon name={'ios-radio-button-on'} size={28} color={"#d9d511"}
+                        style={styles.legendIcon} />
+                  <Text style={styles.legendText}>
+                    Medium chance of finding a parking space
+                  </Text>
+                </View>
+
+                <View style={styles.legendView}>
+                  <Icon name={'ios-radio-button-on'} size={28} color={"#d10d0d"}
+                        style={styles.legendIcon} />
+                  <Text style={styles.legendText}>
+                    Low chance of finding a parking space
+                  </Text>
+                </View>
+
+              </View>
+
+            </View>
+
+
+            <View>
+              <TouchableOpacity style={styles.button}
+                                onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
+                <Text style={styles.buttonText}>
+                  Go Back
+                </Text>
+              </TouchableOpacity>
+            </View>
+
           </View>
-
-          <View style={styles.legend}>
-            <Text style={styles.sectionTitle}>
-              Legend
-            </Text>
-
-            <View style={styles.legendView}>
-              <Icon name={'ios-radio-button-on'} size={28} color={"#0ec91b"}
-                style={styles.legendIcon} />
-              <Text style={styles.legendText}>
-                High chance of finding a parking space
-              </Text>
-            </View>
-
-            <View style={styles.legendView}>
-              <Icon name={'ios-radio-button-on'} size={28} color={"#d9d511"}
-                style={styles.legendIcon} />
-              <Text style={styles.legendText}>
-                Medium chance of finding a parking space
-              </Text>
-            </View>
-
-            <View style={styles.legendView}>
-              <Icon name={'ios-radio-button-on'} size={28} color={"#d10d0d"}
-                style={styles.legendIcon} />
-              <Text style={styles.legendText}>
-                Low chance of finding a parking space
-              </Text>
-            </View>
-
-          </View>
-
-        </View>
-
-
-        <View>
-          <TouchableOpacity style={styles.button}
-<<<<<<< HEAD
-            onPress={() => navigation.goBack()}>
-=======
-            onPress={() => RootStore.CreateAccountDomain.login(navigation)}>
->>>>>>> 724f9e14f43e187934db5643063b4964e83c5761
-            <Text style={styles.buttonText}>
-              Go Back
-            </Text>
-          </TouchableOpacity>
-        </View>
-
-      </View>
-    );
-  }
+      );
+    }
 );
 
 
@@ -125,7 +112,6 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 5,
     width: WIDTH - 30,
     borderRadius: 30,
     borderColor: '#0A5A45',
@@ -190,11 +176,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
 
   },
-<<<<<<< HEAD
-});
-=======
 });
 
 
 
->>>>>>> 724f9e14f43e187934db5643063b4964e83c5761

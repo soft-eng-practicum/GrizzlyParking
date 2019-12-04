@@ -1,16 +1,15 @@
-
 import { Image, ScrollView, Dimensions, StyleSheet, Text, TextInput, View, Keyboard, KeyboardAvoidingView } from 'react-native';
-
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { RootStoreContext } from '../stores/RootStore';
 import BackGroundImage from '../../lib/images/logo2A.png';
+
 import Icon from 'react-native-vector-icons/Ionicons';
+const { width: WIDTH } = Dimensions.get('window');
 
-const { width: WIDTH } = Dimensions.get('window')
-const { height: HEIGHT } = Dimensions.get('window')
 
+const { height: HEIGHT } = Dimensions.get('window');
 
 export const Login = observer(
     ({ navigation, ...props }) => {
@@ -23,11 +22,11 @@ export const Login = observer(
         }, []);
 
         const RootStore = React.useContext(RootStoreContext);
-        passwordRef = null;
+        let passwordRef = null;
 
         return (
             <ScrollView style={styles.background} behavior="padding">
-                <Image source={BackGroundImage} style={styles.backgroundImage} />
+               <Image source={BackGroundImage} style={styles.backgroundImage} />
 
                     <View>
                         <Text style={styles.logoText}>Grizzly Parking</Text>
@@ -38,9 +37,9 @@ export const Login = observer(
                             <TouchableOpacity style={styles.buttonLogin}
                                 onPress={() => RootStore.ParkingDomain.navigateToLanding(navigation)}
                                 >
-                                <Text style={styles.loginText}>Welcome back 
+                                <Text style={styles.loginText}>Welcome back
                                {this.RootStore.UserDomain.user.user._user.email}
-                                
+
                                 </Text>
                             </TouchableOpacity>
                         </KeyboardAvoidingView>}
@@ -68,7 +67,7 @@ export const Login = observer(
                             style={styles.inputIconPass} />
 
                         <TextInput ref={(ref) => passwordRef = ref}
-                            style={styles.inputBoxs}
+                            style={styles.inputBoxes}
                             placeholder={'Password'}
                             placeholderTextColor={'rgba(255,255,255,0.7)'}
                             secureTextEntry={true}
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
     },
 
     backgroundImage: {
-         alignSelf: 'center',
+        alignSelf: 'center',
         alignItems: 'center',
         flex: 1,
         width: 320,
@@ -177,7 +176,9 @@ const styles = StyleSheet.create({
         margin: 20,
     },
 
-  inputBoxs: {
+
+
+    inputBoxes: {
         backgroundColor: 'rgba(255,255,255,0.35)',
         width: WIDTH - 80,
         height: 45,
@@ -197,7 +198,7 @@ const styles = StyleSheet.create({
         color: 'rgba(255,255,255,0.5)',
         top: 7,
         left: 55
-       
+
     },
     inputIconPass: {
         position: 'absolute',

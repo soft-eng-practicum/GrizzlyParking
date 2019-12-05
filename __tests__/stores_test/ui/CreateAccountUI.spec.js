@@ -8,13 +8,15 @@ import {LoginUI} from "../../../src/stores/ui/LoginUI";
 test('Test CreateAccount UI', () => {
     const store = new CreateAccountUI();
     /*
-    GIVEN: initialization of the LoginUI
-    THEN: username should be empty
+    GIVEN: initialization of the CreateAccountUI
+    THEN: email should be empty
     THEN: password should be empty
+    THEN: confirm password should be empty
 
-    WHEN: We set the username and password
+    WHEN: We set the email, password and confirm password
     THEN: we should expect it to match the case.
      */
+
     expect(store.email).toBe("");
     expect(store.password).toBe("");
     expect(store.confirmPassword).toBe("");

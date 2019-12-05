@@ -10,7 +10,7 @@ test('Test Forgot Password UI', () => {
     GIVEN: initialization of the ForgotPasswordUI
     THEN: email should be empty
 
-    WHEN: We set the username and password
+    WHEN: We set the email
     THEN: we should expect it to match the case.
      */
     expect(store.email).toBe("");

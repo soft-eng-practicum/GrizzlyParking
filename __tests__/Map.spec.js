@@ -1,5 +1,5 @@
 import React from 'react';
-import {Map} from "../src/maps/Map";
+import Map from "../src/maps/Map";
 
 
 import renderer from 'react-test-renderer';

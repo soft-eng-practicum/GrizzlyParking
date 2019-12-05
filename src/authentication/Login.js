@@ -26,7 +26,7 @@ export const Login = observer(({navigation, ...props}) => {
       RootStore.LoginUI.setUsername('');
       RootStore.LoginUI.setPassword('');
     };
-  }, [RootStore.LoginUI]);
+  }, []);
 
   const RootStore = React.useContext(RootStoreContext);
   let passwordRef = null;

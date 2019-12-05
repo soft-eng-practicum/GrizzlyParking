@@ -6,7 +6,7 @@
     "start": "react-native start",
     "test": "jest --config ./jest.config.json --verbose",
     "test:watch": "npm run test -- --watch",
-    "lint": "eslint ."
+    "lint": "eslint ./src --fix"
   },
   "dependencies": {
     "@react-native-firebase/app": "6.0.3",
